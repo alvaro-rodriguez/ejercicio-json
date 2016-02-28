@@ -55,13 +55,17 @@ while salir == False:
     if respuesta == "q":
         salir = True
 
-     elif respuesta == "z":
+    elif respuesta == "z":
         os.system('clear')
         print "+-----------------------------+"
         print "| Conteo de partidos.         |"
         print "+-----------------------------+"
+        for d in doc :
+            print d['Tipo']
+            print d['FechaBOJA']
         raw_input("Pulse enter para continuar")
-        pprint doc
+        
+"""
     elif respuesta == "1":
         os.system('clear')
         print "+-----------------------------+"
@@ -119,3 +123,4 @@ while salir == False:
             
             raw_input("Pulse enter para continuar")
             
+"""
