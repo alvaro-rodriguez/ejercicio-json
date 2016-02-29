@@ -37,18 +37,17 @@ salir = False
 while salir == False:
     os.system('clear')
     print "+----------------------------------------------------------+"
-    print "| Consultor del BOJA.                                      |"
-    print "|                                                          |"
-    print "|  Opciones disponibles:                                   |"
-    print "|  -Conteo de partidos - 1                                 |"
-    print "|  -Número de electos por partido - 2                      |"
-    print "|  -Datos concretos de un partido - 3                      |"
-    print "|  -Buscador por número de electos  - 4                    |"
-    print "|  -Otros datos - 5                                        |"
-    print "|  -\\\Mostrar el contenido del archivo/// -> z            |"
-    print "|                                                          |"
-    print "| número de elementos actuales: %i                      |" % (len(doc))
-    print "|(Para salir usar la letra 'q')                            |"
+    print "| Consultor del BOJA.                                               |"
+    print "|                                                                   |"
+    print "|  Opciones disponibles:                                            |"
+    print "|  -Muestra la cantidad de cada tipo de elemento. - 1               |"
+    print "|  -Muestra información sobre el tipo de elemento relacionado. - 2  |"
+    print "|  -Muestra todos los elementos 'hechos en na fecha'. - 3           |"
+    print "|  -Muestra la información completa de una página.  - 4             |"
+    print "|  -\\\Mostrar el contenido del archivo/// -> z                     |"
+    print "|                                                                   |"
+    print "| número de elementos actuales: %i                               |" % (len(doc))
+    print "|(Para salir usar la letra 'q')                                     |"
     print "+----------------------------------------------------------+"
     respuesta = raw_input("respuesta: ")
 
@@ -66,16 +65,17 @@ while salir == False:
             print d['FechaBOJA']
         raw_input("Pulse enter para continuar")
         
-"""
+
     elif respuesta == "1":
         os.system('clear')
         print "+-----------------------------+"
-        print "| Conteo de partidos.         |"
+        print "| Cantidad de cada elemento.  |"
         print "+-----------------------------+"
+                
         raw_input("Pulse enter para continuar")
 
         
-
+"""
 
     elif respuesta == "2":
         os.system('clear')
