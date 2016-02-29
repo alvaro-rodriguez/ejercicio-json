@@ -4,7 +4,7 @@
 #"Pre-Enunciado"
 
 """
-1.Lista cuenta los títlos de los distintos elementos .
+1.Cuenta los títlos de los distintos elementos .
 
 2.Lista los distintos elementos (Resoluciones,Edictos,Anuncios,etc) y la cantidad de cada uno.
 
@@ -47,6 +47,7 @@ while salir == False:
     print "|  -Otros datos - 5                                        |"
     print "|  -\\\Mostrar el contenido del archivo/// -> z            |"
     print "|                                                          |"
+    print "| número de elementos actuales: %i                      |" % (len(doc))
     print "|(Para salir usar la letra 'q')                            |"
     print "+----------------------------------------------------------+"
     respuesta = raw_input("respuesta: ")
