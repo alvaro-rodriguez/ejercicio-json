@@ -36,7 +36,7 @@ salir = False
 
 while salir == False:
     os.system('clear')
-    print "+----------------------------------------------------------+"
+    print "+-------------------------------------------------------------------+"
     print "| Consultor del BOJA.                                               |"
     print "|                                                                   |"
     print "|  Opciones disponibles:                                            |"
@@ -48,7 +48,7 @@ while salir == False:
     print "|                                                                   |"
     print "| número de elementos actuales: %i                               |" % (len(doc))
     print "|(Para salir usar la letra 'q')                                     |"
-    print "+----------------------------------------------------------+"
+    print "+-------------------------------------------------------------------+"
     respuesta = raw_input("respuesta: ")
 
     #Comprobador de respuesta
@@ -75,53 +75,22 @@ while salir == False:
         raw_input("Pulse enter para continuar")
 
         
-"""
-
-    elif respuesta == "2":
-        os.system('clear')
-        print "+--------------------------------+"
-        print "| Número de electos por partido. |"
-        print "+--------------------------------+"
-        raw_input("Pulse enter para continuar")
-
-
-
-
-    elif respuesta == "3":
-        os.system('clear')
-        print "+----------------------------------------+"
-        print "| Datos concretos de un partido.         |"
-        print "+----------------------------------------+"
-        print "Introduzca el nombre del partido sobre le que desea buscar:"
-        raw_input("Pulse enter para continuar")
-
- 
-
-
     elif respuesta == "4":
         os.system('clear')
         print "+-------------------------------------+"
-        print "| Buscador por número de electos      |"
+        print "| Consultor de página del BOJA.       |"
         print "+-------------------------------------+"
+        nmpa = 0
+        for d in doc :
+            if d['PaginaFinal'] > nmpa: 
+                nmpa =  d['PaginaFinal']
+                print nmpa ,  d['PaginaFinal']
+    
+        print "El número actual de páginas es :" ,nmpa
+        print "Elija en número de página que quiere consultar "
         raw_input("Pulse enter para continuar")
 
 
-    elif respuesta == "5":
-        os.system('clear')
-        print "+------------------------------------+"
-        print "| Otros datos.                       |"
-        print "| -Datos generales de la encuesta -1 |"
-        print "| -Gráficos de las elecciones -2     |"
-        print "+------------------------------------+"
-
-        raw_input("Pulse enter para continuar")
-
-        elif resp2 == "2":
-            os.system('clear')
-            print "+----------------------------------+"
-            print "|   Gráficos de las elecciones     |"
-            print "+----------------------------------+"
+ 
             
-            raw_input("Pulse enter para continuar")
-            
-"""
+
