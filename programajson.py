@@ -74,6 +74,22 @@ while salir == False:
                 
         raw_input("Pulse enter para continuar")
 
+    elif respuesta == "2":
+        os.system('clear')
+        print "+-----------------------------+"
+        print "| Cantidad de cada elemento.  |"
+        print "+-----------------------------+"
+                
+        raw_input("Pulse enter para continuar")
+
+    elif respuesta == "3":
+        os.system('clear')
+        print "+-----------------------------+"
+        print "| Cantidad de cada elemento.  |"
+        print "+-----------------------------+"
+                
+        raw_input("Pulse enter para continuar")
+
         
     elif respuesta == "4":
         os.system('clear')
@@ -84,8 +100,7 @@ while salir == False:
         for d in doc :
             if d['PaginaFinal'] > nmpa: 
                 nmpa =  d['PaginaInicial']
-                print nmpa ,  d['PaginaFinal']
-    
+                    
         print "El número actual de páginas es :" ,nmpa
         print "Elija en número de página que quiere consultar "
         npa = int(raw_input("número de página:"))
