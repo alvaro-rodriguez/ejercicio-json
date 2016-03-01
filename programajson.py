@@ -91,8 +91,11 @@ while salir == False:
         npa = int(raw_input("número de página:"))
         for d in doc:
             if npa == d['PaginaFinal']:
-                print "Página Inicial :" ,d['PaginaInicial']," Página final :",d['PaginaFinal']
-                
+                print "Página Inicial: " ,d['PaginaInicial']," Página final: ",d['PaginaFinal']
+                print "Número de BOJA: ",d['NumeroBoja'] ,"Tipo de artículo: " ,d['Tipo'],"Organismo emisor: ", d['OrganismoEmisor']
+                print "Fecha de disposición: ",d['FechaDisposicion']
+                print "id del artículo: ",d['id'],"Sección: ",d['Seccion']
+                print d['Sumario']
         raw_input("Pulse enter para continuar")
 
 
