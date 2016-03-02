@@ -104,10 +104,12 @@ while salir == False:
         for d in doc :
             if d['Tipo'] == arti:
                 print "+-----------------------------------------------"
-                print "|id:",d['id'] ,"Fecha de disposición: ",d['FechaDisposicion']
-                print "|Organismo emisor: " ,
+                print "|id:",d['id'] 
+                print "|Fecha de disposición: ",d['FechaDisposicion']
+                print "|Organismo emisor: " , d['OrganismoEmisor']
                 print "|Sección: ",d['Seccion']
-                raw_input("Pulse enter para continuar")
+                print "|Abarca desde la página %i a la página %i" % (d['PaginaInicial'],d['PaginaFinal'])
+        raw_input("Pulse enter para continuar")
 
     elif respuesta == "3":
         os.system('clear')
