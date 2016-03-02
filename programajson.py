@@ -8,7 +8,7 @@
 
 2.Lista los distintos elementos (Resoluciones,Edictos,Anuncios,etc) y la cantidad de cada uno.
 
-3.Pide un tipo de elemento( Resoluciones,Edictos,Anuncios,etc) y temuestra todos los que son del mismo tipo junto con la fecha de emisión, el organismo emisor ,la sección a la que pertenecen y la página en la que empieza.
+3.Pide un tipo de elemento( Resoluciones,Edictos,Anuncios,etc) y te muestra todos los que son del mismo tipo junto con la fecha de emisión, el organismo emisor ,la sección a la que pertenecen y la página en la que empieza.
 
 4.Pide una fecha y muestra todos los elementos que se han emitido en la misma .
 
@@ -96,10 +96,18 @@ while salir == False:
     elif respuesta == "2":
         os.system('clear')
         print "+-----------------------------+"
-        print "| Cantidad de cada elemento.  |"
+        print "| Buscador de artículos.      |"
         print "+-----------------------------+"
-                
-        raw_input("Pulse enter para continuar")
+        """3.Pide un tipo de elemento( Resoluciones,Edictos,Anuncios,etc) y te muestra todos los que son del mismo tipo junto con la fecha de emisión, el organismo emisor ,la sección a la que pertenecen y la página en la que empieza."""
+        print "Indique el tipo de artículo sobre el que quiere buscar."
+        arti = raw_input("Tipo: ")
+        for d in doc :
+            if d['Tipo'] == arti:
+                print "+-----------------------------------------------"
+                print "|id:",d['id'] ,"Fecha de disposición: ",d['FechaDisposicion']
+                print "|Organismo emisor: " ,
+                print "|Sección: ",d['Seccion']
+                raw_input("Pulse enter para continuar")
 
     elif respuesta == "3":
         os.system('clear')
