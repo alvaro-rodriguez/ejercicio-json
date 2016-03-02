@@ -72,17 +72,25 @@ while salir == False:
         print "| Cuenta cada tipo de elemento. |"
         print "+-------------------------------+"
         tipos = {}
+        print "+----------------------------+-------------"
+        print "|Nombre del Artículo         |Cantidad" 
         for d in doc :
+            #Las opciones comentadas sirven para testear el funcionamiento del programa.
+
             if d['Tipo'] not in tipos:
                 tipos[d['Tipo']] = 1
-                print "Se ha encontrado un nuevo tipo"
+                #print "Se ha encontrado un nuevo tipo"
+
             elif d['Tipo'] in tipos:
                 tipos[d['Tipo']] = tipos[d['Tipo']] + 1
-            else:
-                print "FAIL"
+                #print "se ha añadido uno"
+
+            #else:
+                #print "FAIL"
+
         for t in tipos:
-            print t
-            t
+            print"|" ,t , tipos[t]
+        print "+-------------------------------------------"    
         raw_input("Pulse enter para continuar")
             
     elif respuesta == "2":
