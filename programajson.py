@@ -84,10 +84,24 @@ while salir == False:
 
     elif respuesta == "3":
         os.system('clear')
-        print "+-----------------------------+"
-        print "| Cantidad de cada elemento.  |"
-        print "+-----------------------------+"
+        print "+-----------------------------------+"
+        print "| Buscador de elementos por fecha.  |"
+        print "+-----------------------------------+"
+        print "Busca artículos que puedan haber sido publicadosen la fecha que indique."
+        print "La fecha deberá llevar el siguiente formato: 'DD/MM/YYYY'"
+        fecha = raw_input("Introduzca la fecha: ")
+        fecok = False
+        for d in doc:
+            if fecha == d['FecchaBOJA']:
+                fecok = True
+                print "id:",d['id'],"Tipo de artículo:",d['Tipo']
+                print "Abarca desde la página %i a la página %i" % (d['PaginaInicial'],d['PaginaFinal'])
                 
+                
+
+        if fecok == False:
+            print "No se ha encontrado ningún artículo que coincida con esa fecha."
+            
         raw_input("Pulse enter para continuar")
 
         
@@ -108,10 +122,11 @@ while salir == False:
             if npa == d['PaginaInicial']:
                 print "+---------------------------------------------------------+"
                 print "|Página Inicial: " ,d['PaginaInicial']," Página final: ",d['PaginaFinal']
-                print "|Número de BOJA: ",d['NumeroBOJA'] ,"Tipo de artículo: " ,d['Tipo'],"Organismo emisor: ", d['OrganismoEmisor']
+                print "|Número de BOJA: ",d['NumeroBOJA'] ,"Tipo de artículo: " ,d['Tipo']
+                print "Organismo emisor: ", d['OrganismoEmisor']
                 print "|Fecha de disposición: ",d['FechaDisposicion']
                 print "|id del artículo: ",d['id'],"Sección: ",d['Seccion']
-                print "-----------------------------------------------------------"
+                print "+---------------------------------------------------------+"
                 print d['Sumario']
                 print "+---------------------------------------------------------+"
         raw_input("Pulse enter para continuar")
