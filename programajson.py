@@ -101,6 +101,7 @@ while salir == False:
         """3.Pide un tipo de elemento( Resoluciones,Edictos,Anuncios,etc) y te muestra todos los que son del mismo tipo junto con la fecha de emisión, el organismo emisor ,la sección a la que pertenecen y la página en la que empieza."""
         print "Indique el tipo de artículo sobre el que quiere buscar."
         arti = raw_input("Tipo: ")
+        artfa = False
         for d in doc :
             if d['Tipo'] == arti:
                 print "+-----------------------------------------------"
@@ -109,6 +110,12 @@ while salir == False:
                 print "|Organismo emisor: " , d['OrganismoEmisor']
                 print "|Sección: ",d['Seccion']
                 print "|Abarca desde la página %i a la página %i" % (d['PaginaInicial'],d['PaginaFinal'])
+                artfa = True
+        if artfa == False:
+            print "No se ha encontrado  ningún artículo que coincida."
+        else:
+        
+            print "+-----------------------------------------------"
         raw_input("Pulse enter para continuar")
 
     elif respuesta == "3":
