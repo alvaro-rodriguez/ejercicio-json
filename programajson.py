@@ -44,7 +44,6 @@ while salir == False:
     print "|  -Muestra información sobre el tipo de elemento relacionado. - 2  |"
     print "|  -Muestra todos los elementos 'hechos en na fecha'. - 3           |"
     print "|  -Muestra la información completa de una página.  - 4             |"
-    print "|  -\\\Mostrar el contenido del archivo/// -> z                     |"
     print "|                                                                   |"
     print "| número de elementos actuales: %i                               |" % (len(doc))
     print "|(Para salir usar la letra 'q')                                     |"
@@ -54,18 +53,7 @@ while salir == False:
     #Comprobador de respuesta
     if respuesta == "q":
         salir = True
-
-    elif respuesta == "z":
-        os.system('clear')
-        print "+-----------------------------+"
-        print "| Conteo de partidos.         |"
-        print "+-----------------------------+"
-        for d in doc :
-            print d['Tipo']
-            print d['FechaBOJA']
-        raw_input("Pulse enter para continuar")
-        
-
+    
     elif respuesta == "1":
         os.system('clear')
         print "+-------------------------------+"
