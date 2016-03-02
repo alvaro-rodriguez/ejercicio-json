@@ -68,12 +68,23 @@ while salir == False:
 
     elif respuesta == "1":
         os.system('clear')
-        print "+-----------------------------+"
-        print "| Cantidad de cada elemento.  |"
-        print "+-----------------------------+"
-                
+        print "+-------------------------------+"
+        print "| Cuenta cada tipo de elemento. |"
+        print "+-------------------------------+"
+        tipos = {}
+        for d in doc :
+            if d['Tipo'] not in tipos:
+                tipos[d['Tipo']] = 1
+                print "Se ha encontrado un nuevo tipo"
+            elif d['Tipo'] in tipos:
+                tipos[d['Tipo']] = tipos[d['Tipo']] + 1
+            else:
+                print "FAIL"
+        for t in tipos:
+            print t
+            t
         raw_input("Pulse enter para continuar")
-
+            
     elif respuesta == "2":
         os.system('clear')
         print "+-----------------------------+"
@@ -92,7 +103,7 @@ while salir == False:
         fecha = raw_input("Introduzca la fecha: ")
         fecok = False
         for d in doc:
-            if fecha == d['FecchaBOJA']:
+            if fecha == d['FechaBOJA']:
                 fecok = True
                 print "id:",d['id'],"Tipo de artículo:",d['Tipo']
                 print "Abarca desde la página %i a la página %i" % (d['PaginaInicial'],d['PaginaFinal'])
