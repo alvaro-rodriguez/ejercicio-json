@@ -172,12 +172,16 @@ while salir == False:
         print "Si desea guardad estos datos en un fichero escriba 'yes'."
         resp3 = raw_input("¿Escribir datos? ")
         if resp3 == "yes":
-            fichero = open(index.html,"r+")
-            for h in hojas:
+            print "Elija el nombre que quiere dar al fichero html."
+            nomhtml = raw_input("Nombre del fichero: ")
+            os.mknod(nomhtml)
+            
+            fichero = open(nomhtml,"r+")
+            for d in doc:
                 fichero.write("<h1>"+d['Tipo']+"</h1>"+"\n")
                 fichero.write("<p>"+d['Sumario']+"</p>"+"\n")
                 fichero.write("<a href='"+d['url']+"'>"+"Más información"+"</a>"+"\n")
-
+            fichero.close()
         raw_input("Pulse enter para continuar")
  
             
