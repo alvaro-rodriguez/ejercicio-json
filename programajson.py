@@ -44,6 +44,7 @@ while salir == False:
     print "|  -Muestra información sobre el tipo de elemento relacionado. - 2  |"
     print "|  -Muestra todos los elementos 'hechos en na fecha'. - 3           |"
     print "|  -Muestra la información completa de una página.  - 4             |"
+    print "|  -Imprime los datos en formato html - 5                           |"              
     print "|                                                                   |"
     print "| número de elementos actuales: %i                               |" % (len(doc))
     print "|(Para salir usar la letra 'q')                                     |"
@@ -155,7 +156,30 @@ while salir == False:
                 print "+---------------------------------------------------------+"
         raw_input("Pulse enter para continuar")
         
-
+    elif respuesta == "2":
+        os.system('clear')
+        print "+-------------------------------+"
+        print "| Función de impresión en html. |"
+        print "+-------------------------------+"
+        
+        print "Imprime todas las publicaciones."
+                
+        for d in doc :
+            print "<h1>",d['Tipo'],"</h1>"
+            print "<p>",d['sumario'],"</p>"
+            print "<a href=",
+                print "|id:",d['id'] 
+                print "|Fecha de disposición: ",d['FechaDisposicion']
+                print "|Organismo emisor: " , d['OrganismoEmisor']
+                print "|Sección: ",d['Seccion']
+                print "|Abarca desde la página %i a la página %i" % (d['PaginaInicial'],d['PaginaFinal'])
+                artfa = True
+        if artfa == False:
+            print "No se ha encontrado  ningún artículo que coincida."
+        else:
+        
+            print "+-----------------------------------------------"
+        raw_input("Pulse enter para continuar")
  
             
 
