@@ -156,29 +156,28 @@ while salir == False:
                 print "+---------------------------------------------------------+"
         raw_input("Pulse enter para continuar")
         
-    elif respuesta == "2":
+    elif respuesta == "5":
         os.system('clear')
         print "+-------------------------------+"
         print "| Función de impresión en html. |"
         print "+-------------------------------+"
         
         print "Imprime todas las publicaciones."
-                
+        raw_input("Pulse enter para Mostrar los resultados")        
         for d in doc :
             print "<h1>",d['Tipo'],"</h1>"
-            print "<p>",d['sumario'],"</p>"
-            print "<a href=",
-                print "|id:",d['id'] 
-                print "|Fecha de disposición: ",d['FechaDisposicion']
-                print "|Organismo emisor: " , d['OrganismoEmisor']
-                print "|Sección: ",d['Seccion']
-                print "|Abarca desde la página %i a la página %i" % (d['PaginaInicial'],d['PaginaFinal'])
-                artfa = True
-        if artfa == False:
-            print "No se ha encontrado  ningún artículo que coincida."
-        else:
-        
-            print "+-----------------------------------------------"
+            print "<p>",d['Sumario'],"</p>"
+            print "<a href='",d['url'],"'>","Más información","</a>"
+
+        print "Si desea guardad estos datos en un fichero escriba 'yes'."
+        resp3 = raw_input("¿Escribir datos? ")
+        if resp3 == "yes":
+            fichero = open(index.html,"r+")
+            for h in hojas:
+                fichero.write("<h1>"+d['Tipo']+"</h1>"+"\n")
+                fichero.write("<p>"+d['Sumario']+"</p>"+"\n")
+                fichero.write("<a href='"+d['url']+"'>"+"Más información"+"</a>"+"\n")
+
         raw_input("Pulse enter para continuar")
  
             
